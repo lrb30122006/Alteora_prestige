@@ -63,7 +63,7 @@
                     border-bottom: none;
                     }
                     .deroulant > a::after {
-                        content: "▼";
+                        content: "";
                         font-size: 12px;
                     }
                     nav ul li {
