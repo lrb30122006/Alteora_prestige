@@ -34,18 +34,54 @@
     <div class="destinations">
         <h1>Nos Destinations</h1>
         <div class="destination">
-            <figure>
+            <figure class="card fade-in">
                 <img src="/images/luxembourg1.png" alt="Luxembourg" class="destination-image">
-                <figcaption>Luxembourg</figcaption>
+                <figcaption class="text-card">Luxembourg</figcaption>
             </figure>
-            <figure>
-                <img src="/images/Key_west.jpg" alt="Floride" class="destination-image">
-                <figcaption>Floride</figcaption>
+            <figure class="card fade-in">
+                <img src="/images/miami_beach.jpg" alt="Floride" class="destination-image">
+                <figcaption class="text-card">Floride</figcaption>
+                </figure>
+            <figure class="card fade-in">
+                    <img src="/images/cathedralLIS.png" alt="Listembourg" class="destination-image">
+                    <figcaption class="text-card">Listembourg</figcaption>
+            </figure>
         </div>
-            <figure>
-                <img src="/images/cathedralLIS.png" alt="Listembourg" class="destination-image">
-                <figcaption>Listembourg</figcaption>
-            </figure>
     </div>
+    <script>
+        let lastScroll = window.scrollY;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+    
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        header.classList.add('header-hidden');
+      } else {
+        header.classList.remove('header-hidden');
+      }
+    
+      lastScroll = currentScroll;
+    });
+    
+    </script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              // Pour éviter que l'animation se répète :
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+      
+        document.querySelectorAll('.fade-in').forEach(el => {
+          observer.observe(el);
+        });
+      </script>
+      
 </body>
 </html>

@@ -81,6 +81,9 @@
     border: white 2px solid;
     background-color: #3B3B3B;
     gap: 10px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
 .logo {
     width: 6%;
@@ -99,10 +102,60 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(/images/background.webp);
+    background-image: url(/images/Key_west.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     text-align: center;
     font-size: 2.6em;
+}
+.header-hidden {
+    transform: translateY(-100%);
+  }
+  .destination {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: #e0c17c;
+    border-radius: 30px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 250px;
+    height: 420px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .destination-image {
+    width: 200px;
+    height: 220px; 
+    object-fit: cover;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+  }
+  
+   .text-card {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #2b2b2b;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
