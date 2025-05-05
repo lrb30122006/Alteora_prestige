@@ -112,50 +112,136 @@
 .header-hidden {
     transform: translateY(-100%);
   }
-  .destination {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  
-  .card {
-    background: #e0c17c;
-    border-radius: 30px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    width: 250px;
-    height: 420px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .destination-image {
-    width: 200px;
-    height: 220px; 
-    object-fit: cover;
-    border-radius: 25px;
-    margin-bottom: 1rem;
-  }
-  
-   .text-card {
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    color: #2b2b2b;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-}
-.fade-in {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+/* Couleurs Altéora Prestige */
+:root {
+  --primary-color: #00E5FF; /* Bleu clair, couleur moderne et élégante */
+  --secondary-color: #2b2b2b; /* Gris très foncé pour un contraste élégant */
+  --accent-color: #FFD700; /* Or pour une touche de luxe */
+  --bg-color: #f9f9f9; /* Arrière-plan léger et neutre */
+  --hover-bg: #00b8cc; /* Couleur au survol */
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+.destination {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: center;
 }
+
+.card {
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white; /* Fond blanc pour un aspect soigné */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.destination-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .destination-image {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.destination-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--secondary-color); /* Gris foncé pour une lecture facile */
+}
+
+.destination-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--bg-color);
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 20px 20px;
+}
+
+.destination-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color); /* Bleu clair pour une touche fraîche */
+}
+
+.explore-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: var(--hover-bg); /* Changement de couleur lors du survol */
+}
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: #3B3B3B;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 10px 0;
+  }
+  
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 15s linear infinite;
+  }
+  
+  .marquee-track span {
+    color: white;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    padding-right: 50px;
+  }
+  
+  /* Animation */
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .destinations h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+  }
+  
