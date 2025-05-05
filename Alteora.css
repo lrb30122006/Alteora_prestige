@@ -124,11 +124,13 @@
 .destination {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  align-items: center;
+  gap: 130px;
+  width: 90%; /* Contrôle la largeur totale de la grille */
+  max-width: 1200px; /* Évite qu'elle s'étire trop sur les grands écrans */
+  margin: 0 auto; /* Centre horizontalement */
+  padding: 40px 0;
 }
+
 
 .card {
   position: relative;
