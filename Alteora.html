@@ -12,7 +12,7 @@
         <img src="/images/logo.png" alt="Logo" class="logo">
         <nav>
             <ul>
-                <li class="deroulant"><a href="#">Destinations &ensp;</a>
+                <li class="deroulant"><a href="#destinations">Destinations &ensp;</a>
                     <ul class="sous">
                         <li><a href="#">Luxembourg<img src="/images/drapeauLU.jpg" class="drapeau"></a></li>
                         <li><a href="#">Floride<img src="/images/drapeauFLO.jpg" class="drapeau"></a></li>
@@ -21,7 +21,7 @@
                 </li>
                 <li class="deroulant"><a href="#">Tickets &ensp;</a>
             </li>
-                <li class="deroulant"><a href="#">Avis &ensp;</a>
+                <li class="deroulant"><a href="#avis">Avis &ensp;</a>
                 </li>
                 <li class="deroulant"><a href="#">Contact &ensp;</a>
                 </li>
@@ -39,7 +39,8 @@
         <span>🦄 -40% sur les billets pour le Listembourg ! Pays des licornes fiscales, du wifi dans les forêts et des croissants à l’ail ! ✈️</span>
       </div>
     </div>
-    <div class="destination">
+    <div class="background_destinations">
+    <div class="destination" id="destinations">
       <figure class="card">
         <img src="images/luxembourg1.png" alt="Luxembourg" class="destination-image">
         <div class="card-content">
@@ -69,12 +70,35 @@
           <h3 class="destination-title">Listembourg</h3>
           <p class="destination-description">Un petit coin de paradis, parfait pour les amateurs de nature et de paysages époustouflants. L’aventure vous attend !</p>
           <div class="card-footer">
+            <span class="badge-promo">-40%</span>
             <span class="destination-price">À partir de 350€</span>
             <a href="#" class="explore-btn">Explorer</a>
           </div>
         </div>
       </figure>
     </div>
+    </div>
+    <section class="guestbook-section" id="avis">
+      <h2 class="guestbook-title">Avis</h2>
+      <div class="guestbook-grid">
+        <div class="quote-card light">
+          <p class="quote-text">"Des palmiers, des plages infinies, et un coucher de soleil rose comme un cocktail. Altéora, vous m’avez réconciliée avec les vacances."</p>
+          <p class="author">– Camille S.</p>
+        </div>
+        <div class="quote-card dark">
+          <p class="quote-text">"Chaque ruelle de Luxembourg semblait me chuchoter une histoire médiévale. Un week-end hors du temps."</p>
+          <p class="author">– Antoine M.</p>
+        </div>
+        <div class="quote-card light">
+          <p class="quote-text">"Le Listembourg, ce pays qu’on pensait imaginaire… Mais tout y est plus réel qu’ailleurs."</p>
+          <p class="author">– Léa D.</p>
+        </div>
+        <div class="quote-card dark">
+          <p class="quote-text">"J’ai dansé dans un bal diplomatique en sandales, goûté un latte au gouda, et fait du parapente au-dessus du Parlement… Merci Altéora."</p>
+          <p class="author">– Julien R.</p>
+        </div>
+      </div>
+    </section>
     <script>
         let lastScroll = window.scrollY;
     const header = document.querySelector('.header');
