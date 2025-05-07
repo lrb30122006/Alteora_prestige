@@ -113,9 +113,21 @@
     color: white;
     text-align: center;
     font-size: 2.6em;
+    flex-direction: column;
 }
 .intro h1 {
   font-family: 'Playfair Display', serif;
+  display: flex;
+}
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+
 }
 .marquee-wrapper {
     width: 100%;
