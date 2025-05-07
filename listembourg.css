@@ -214,7 +214,7 @@
     max-width: 400px;
   }
 .destination-cards {
-    background: linear-gradient(to bottom, #6cc6c9, #ffffff);
+    background: linear-gradient(to bottom, #f3cbda, #ffffff);
 }
 .gallery {
     padding: 60px 20px;
@@ -278,7 +278,7 @@
     height: 100%;
   }
   .events-section {
-    background: linear-gradient(to top, #6cc6c9, #ffffff);
+    background: linear-gradient(to top, #f3cbda, #ffffff);
     padding: 60px 20px;
     text-align: center;
   }
