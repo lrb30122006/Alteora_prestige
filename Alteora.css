@@ -87,13 +87,13 @@
     height: 16%;
 }
 .logo {
-    width: 6%;
-    height: auto;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    border: white 2px solid;
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: white 2px solid;
 }
 .deroulant {
     padding-top: 60px;
