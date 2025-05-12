@@ -1,0 +1,275 @@
+*{  
+    margin: 0px;  
+    padding: 0px;  
+    font-family: Avenir, sans-serif;  
+    }  
+    nav {  
+    width: 100%;  
+    margin: 0 auto;  
+    background-color: #3B3B3B;  
+    position: sticky;  
+    top: 0px;  
+    }  
+    nav ul{  
+    list-style-type: none;  
+    }  
+    nav ul li {  
+    float: left;  
+    width: 25%;  
+    text-align: center;  
+    }  
+    nav ul::after{  
+    content: "";  
+    display: table;  
+    clear: both;  
+    }  
+    nav a{  
+    display: block;  
+    text-decoration: none;  
+    color: white;  
+    border-bottom: 2px solid transparent;  
+    padding: 10px 0px;  
+    }  
+    nav a:hover{  
+    color: goldenrod ;  
+    border-bottom: 2px solid goldenrod;  
+    }  
+    .sous{
+        display: none;
+        box-shadow: 0px 1px 2px #CCC;
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        background-color: #3B3B3B;
+        }
+        nav > ul li:hover .sous {
+        display: block;
+        }
+        .sous li {
+            float: none;
+            width: 100%;
+            text-align: left;
+            }
+            .sous a {
+                padding: 10px;
+                border-bottom: none;
+                gap: 10px;
+                align-items: center;
+                display: flex;
+                }
+                .sous a:hover {
+                    background-color: RGBa(200,200,200,0.1);
+                    border-bottom: none;
+                    }
+                    .deroulant > a::after {
+                        content: "";
+                        font-size: 12px;
+                    }
+                    nav ul li {
+                        float: left;
+                        width: 25%;
+                        text-align: center;
+                        position: relative;
+                    }
+.drapeau {
+    width: 10%;
+    height: auto;
+}
+.header {
+    display: flex;
+    border: white 2px solid;
+    background-color: #3B3B3B;
+    gap: 10px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 16%;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: white 2px solid;
+}
+.deroulant {
+    padding-top: 60px;
+}
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/images/maison-background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: 2.6em;
+}
+.intro h1 {
+  font-family: 'Playfair Display', serif;
+}
+.header-hidden {
+    transform: translateY(-100%);
+  }
+/* Couleurs Altéora Prestige */
+:root {
+  --primary-color: #00E5FF; 
+  --secondary-color: #2b2b2b; 
+  --accent-color: #FFD700; 
+  --bg-color: #f9f9f9; 
+  --hover-bg: #00b8cc; 
+}
+
+.destination {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 130px;
+  width: 90%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 40px 0;
+  align-items: stretch;;
+}
+.background_destinations {
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+}
+
+.card {
+  position: relative;
+  background-color: #333;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white; 
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.destination-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  background-color: #333;
+}
+
+.card:hover .destination-image {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.destination-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white
+}
+
+.destination-description {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--bg-color);
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 20px 20px;
+  background-color: #333;
+}
+
+.destination-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.explore-btn {
+  background-color: goldenrod;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: var(--hover-bg); 
+}
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: #3B3B3B;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 10px 0;
+  }
+  
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 15s linear infinite;
+  }
+  
+  .marquee-track span {
+    color: white;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    padding-right: 50px;
+  }
+  
+  /* Animation */
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .destinations h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+  }
+  .badge-promo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: crimson;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&display=swap');

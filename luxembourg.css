@@ -340,3 +340,20 @@
         text-decoration: none;
         font-weight: bold;
     }
+    .explore-btn {
+      background-color: goldenrod;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      align-items: center;
+    }
+    
+    .explore-btn:hover {
+      background-color: var(--hover-bg); /* Changement de couleur lors du survol */
+    }
+    .event-card a {
+      justify-content: center;
+    }
