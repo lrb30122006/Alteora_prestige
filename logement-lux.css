@@ -115,4 +115,135 @@
 }
 .header-hidden {
     transform: translateY(-100%);
+}
+  
+/* SECTION DESTINATION – LUXEMBOURG */
+.background_destinations {
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .card {
+    background-color: #333;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .destination-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 400px;
+  }
+  
+  .card-content {
+    padding: 30px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .destination-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+  
+  .destination-description {
+    font-size: 1.1rem;
+    color: #DDE1E7;
+    margin-bottom: 25px;
+  }
+  
+  .card-footer {
+    background-color: #3B3B3B;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    border-top: 1px solid #1a252f;
+  }
+  
+  .destination-price {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .explore-btn {
+    background-color: #9EA3B0;
+    color: #333;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-btn:hover {
+    background-color: #FFFFFF;
+    color: #333;
+  }
+  .marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: #3B3B3B;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 10px 0;
+  }
+  
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 15s linear infinite;
+  }
+  
+  .marquee-track span {
+    color: white;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    padding-right: 50px;
+  }
+  
+  /* Animation */
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .background_destinations-lis {
+    background: linear-gradient(to top, #e0f7fa, #ffffff);
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  footer p {
+    margin: 0;
+    font-size: 1rem;
   }
