@@ -439,3 +439,46 @@ iframe {
     margin: 0;
     font-size: 1rem;
   }
+  @media (max-width: 768px){  
+    .header li {
+    size-adjust: 0.5;
+    font-size: 0.8em;
+  }}
+  @media (max-width: 768px){
+    .intro h1 {
+      font-size: 2rem;
+    }
+  }
+.contact {
+  display: flex;
+}
+.map {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .map {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.particule {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: exploser 700ms ease-out forwards;
+  }
+
+  @keyframes exploser {
+    to {
+      transform: translate(var(--x), var(--y)) scale(0);
+      opacity: 0;
+    }
+  }

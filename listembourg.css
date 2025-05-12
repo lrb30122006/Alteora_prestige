@@ -353,3 +353,16 @@
     .explore-btn:hover {
       background-color: var(--hover-bg); /* Changement de couleur lors du survol */
     }
+      @media (max-width: 768px){  
+    .header li {
+    size-adjust: 0.5;
+    font-size: 0.8em;
+  }}
+ @media (max-width: 768px){
+    .intro h1  {
+      font-size: 2rem;
+    }
+      .intro h2  {
+      font-size: 2rem;
+    }
+  }

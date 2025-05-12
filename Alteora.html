@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Alteora.css">
     <title>Altéora Prestige</title>
 </head>
-<body>
+<body onclick="eclater(event)">
     <div class="header">
       <a href="Alteora.html"> <img src="/images/logo.png" alt="Logo" class="logo"></a>
         <nav>
@@ -100,7 +100,7 @@
       </div>
     </section>
     <section class="contact" id="contact">
-      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1wbAiDPYphSwXdxLMd1rhbJEY06_RHro&ehbc=2E312F" width="640" height="480"></iframe>
+      <iframe class="map" src="https://www.google.com/maps/d/u/0/embed?mid=1wbAiDPYphSwXdxLMd1rhbJEY06_RHro&ehbc=2E312F" width="640" height="480"></iframe>
       <div class="contact-section">
       <h2>Contactez-nous</h2>
       <form class="contact-form">
@@ -162,6 +162,37 @@
         document.querySelectorAll('.fade-in').forEach(el => {
           observer.observe(el);
         });
+        let clickCount = 0;
+    const logo = document.getElementById("logo");
+
+    logo.addEventListener("click", () => {
+      clickCount++;
+
+      if (clickCount === 5) {
+        // Ajout du message surprise
+        const surprise = document.createElement('div');
+        surprise.innerText = "Félicitation vous êtes officiellement premium 🎉!";
+        surprise.style.position = "fixed";
+        surprise.style.bottom = "20px";
+        surprise.style.right = "20px";
+        surprise.style.padding = "20px 30px";
+        surprise.style.background = "black";
+        surprise.style.color = "gold";
+        surprise.style.border = "2px solid gold";
+        surprise.style.borderRadius = "12px";
+        surprise.style.fontFamily = "sans-serif";
+        surprise.style.fontWeight = "bold";
+        surprise.style.fontSize = "16px";
+        surprise.style.boxShadow = "0 0 10px gold, 0 0 20px gold, 0 0 30px orange";
+        surprise.style.zIndex = 9999;
+        document.body.appendChild(surprise);
+
+        // Ajout d’un effet néon doré au logo
+        logo.style.border = "2px solid gold";
+        logo.style.borderRadius = "12px";
+        logo.style.boxShadow = "0 0 10px gold, 0 0 20px gold, 0 0 30px orange";
+      }
+    });
       </script>
       
 </body>
