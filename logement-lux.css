@@ -262,4 +262,10 @@
       width: 90%;
       margin: 10px auto;
     }
+        .logo {
+      width: 70px;
+      height: 70px;
+      margin-top: 35px;
+      margin-bottom: 10px;
+    }
   }
