@@ -273,3 +273,16 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   }
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&display=swap');
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }

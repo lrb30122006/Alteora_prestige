@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/logo.png" type="image/jpg" />
+    <link rel="stylesheet" href="logement-lux.css">
+    <title>Altéora Prestige</title>
+</head>
+<body>
+    <div class="header">
+      <a href="Alteora.html"> <img src="/images/logo.png" alt="Logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li class="deroulant"><a href="#destinations">Destinations &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="luxembourg.html">Luxembourg<img src="/images/drapeauLU.jpg" class="drapeau"></a></li>
+                        <li><a href="floride.html">Floride<img src="/images/drapeauFLO.jpg" class="drapeau"></a></li>
+                        <li><a href="listembourg.html">Listembourg<img src="/images/drapeauLIS.png" class="drapeau"></a></li>
+                    </ul>
+                </li>
+                <li class="deroulant"><a href="tickets.html">Tickets &ensp;</a>
+            </li>
+                <li class="deroulant"><a href="#avis">Avis &ensp;</a>
+                </li>
+                <li class="deroulant"><a href="#contact">Contact &ensp;</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="intro">
+        <h1>logement au Luxembourg</h1>
+    </div>
+    <script>
+        let lastScroll = window.scrollY;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+    
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        header.classList.add('header-hidden');
+      } else {
+        header.classList.remove('header-hidden');
+      }
+    
+      lastScroll = currentScroll;
+    });
+    
+    </script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              // Pour éviter que l'animation se répète :
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+      
+        document.querySelectorAll('.fade-in').forEach(el => {
+          observer.observe(el);
+        });
+      </script>
+    </body>
+    </html>
